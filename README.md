@@ -24,6 +24,20 @@ html {
 }
 ```
 
+## 使用方法
+```
+let paser=new ZmlParser();
+let greetTx="Hello Zml";
+let tree=paser.parse(`
+    root:div .root ~sdfskd
+    span .title ~${greetTx}
+`); // {root: [DIVElement.root]}
+let body=document.querySelector("body");
+body.appendChild(tree.root);
+```
+
+    一定要使用别名进行标注，否则不会出现在tree中。可以将别名视为导出的名字。
+
 ## 专有名称的解释
 ### 原子名称
 标识节点类型的名称
