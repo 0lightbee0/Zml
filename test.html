@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="zmlParser.js"></script>
+    <script>
+        addEventListener("load", e => {
+            let parser = new ZmlParser();
+            let tx = `root:div .Hello ~"Hello Jackie's Jacket." {
+                span ~"list"
+            }`;
+            let tree = parser.parse(tx);
+            let body = document.querySelector("body");
+            body.appendChild(tree.root);
+        });
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
