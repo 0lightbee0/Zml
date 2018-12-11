@@ -32,7 +32,7 @@ let tree=paser.parse(`
     root:div .root ~sdfskd {
         span .title ~${greetTx}
     }
-`); // {root: [DIVElement.root]}
+`); // {root: [HTMLDIVElement.root]}
 let body=document.querySelector("body");
 body.appendChild(tree.root);
 ```
