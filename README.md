@@ -29,8 +29,9 @@ html {
 let paser=new ZmlParser();
 let greetTx="Hello Zml";
 let tree=paser.parse(`
-    root:div .root ~sdfskd
-    span .title ~${greetTx}
+    root:div .root ~sdfskd {
+        span .title ~${greetTx}
+    }
 `); // {root: [DIVElement.root]}
 let body=document.querySelector("body");
 body.appendChild(tree.root);
